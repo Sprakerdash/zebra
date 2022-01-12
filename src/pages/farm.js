@@ -50,10 +50,10 @@ const getBlockchain = (maskconnect, setMaskConnect) =>
   })
 
 function Farm(props) {
-  const [time, setTIme] = useState(setTime())
+  const [time, setTime] = useState(setTime())
   useEffect(() => {
     const timer = setInterval(() => {
-      setTIme(getTime())
+      setTime(setTime())
     }, 1000)
     return () => {
       clearInterval(timer)
