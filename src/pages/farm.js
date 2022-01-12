@@ -49,6 +49,17 @@ const getBlockchain = (maskconnect, setMaskConnect) =>
     reject({ code: 404 })
   })
 
+function Farm(props) {
+  const [time, setTIme] = useState(setTime())
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTIme(getTime())
+    }, 1000)
+    return () => {
+      clearInterval(timer)
+    }
+  }, [])
+
   const [maskConnect, setMaskConnect] = useState({
     //TO start connection process
     connect: false,
