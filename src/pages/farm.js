@@ -218,7 +218,7 @@ const getBlockchain = (maskconnect, setMaskConnect) =>
         >
           {maskConnect.rejected ? "Restart" : "Connect"}
         </button>
-      </div> */}
+      </div> }*/
     </Layout>
   )
 }
