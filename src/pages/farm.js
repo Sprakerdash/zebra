@@ -49,17 +49,6 @@ const getBlockchain = (maskconnect, setMaskConnect) =>
     reject({ code: 404 })
   })
 
-function Farm(props) {
-  const [time, setTime] = useState(setTime())
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(setTime())
-    }, 1000)
-    return () => {
-      clearInterval(timer)
-    }
-  }, [])
-
   const [maskConnect, setMaskConnect] = useState({
     //TO start connection process
     connect: false,
@@ -121,7 +110,7 @@ function Farm(props) {
     }
   }
   // console.log("ROLADED")
-  return (
+  /*return (
     <Layout
       pathname={props.location.pathname}
       title="Farming ZebraFinance"
@@ -152,7 +141,7 @@ function Farm(props) {
           </div>
         </h1>
       </div>
-      {/* <div
+      { <div
         style={{
           minHeight: "80vh",
           display: "flex",
